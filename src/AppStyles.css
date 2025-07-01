@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #000080;
 }
 
 .title {
@@ -35,7 +35,56 @@ body {
 }
 
 .react-logo {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px; 
   animation: spin 15s linear infinite;
+  filter: hue-rotate(200deg) saturate(200%);
+  position: relative;
+  right: 655px;
+  bottom: 180px;
+}
+
+.TTP {
+  color: #ffffff;
+ -webkit-text-stroke: 2px black;
+  position: relative;
+  right: 715px;
+  bottom: 140px;
+}
+
+.header {
+  color: #ffffff;
+  position: fixed;
+  top: 30px;
+  font-size: 200%;
+  -webkit-text-stroke: 1px black;
+}
+
+.campus-image {
+  width: 750px; 
+  height: px;
+  border-radius: 5%;
+}
+
+footer {
+  position: fixed;
+  bottom: 50px;
+  color: #ffffff
+}
+
+.searchButton {
+  height: 75px; 
+  width: 75px;
+  position: fixed;
+  top: 10px;
+  right: 25px;
+  color: orange;
+}
+
+.brief {
+  text-align: center;
+  color: #ffffff;
+  position: fixed;
+  top: 115px;
+  font-size: large;
 }
