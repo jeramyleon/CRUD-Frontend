@@ -2,8 +2,8 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import "./AppStyles.css";
 import { BrowserRouter , Router, Routes, Route } from "react-router-dom";
-//import SearchCampus from "./components/SearchCampus";
-//import SearchStudents from "./components/SearhStudents";
+import SearchCampus from "./components/SearchCampus";
+//import SearchStudents from "./components/SearchStudents";
 import HomePage from "./components/HomePage";
 
 const App = () => {
@@ -12,6 +12,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<div className="all"> <HomePage/> </div>}> 
         </Route>
+        <Route path="/CampusSearch" element={<SearchCampus/> }> 
+        </Route>
+         {/* <Route path="/" element={<div className="all"> <SearchStudents/> </div>}> 
+        </Route> */}
       </Routes>
     </BrowserRouter>
   );

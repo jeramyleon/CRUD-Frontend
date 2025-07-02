@@ -1,19 +1,18 @@
 import React from "react";
 import "./NavBarStyles.css";
+import { Link } from "react-router";
 
 const NavBar = () => {
   return (
     <div>
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Search Campus</a></li>
-        <li><a href="">Search Students</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/CampusSearch">Campus Search</Link></li>
+        <li><Link to="">Student Search</Link></li>
       </ul>
     </div>
 
-  //   <nav className="navbar"> 
-  //     <NavLink to="/Home">Home </NavLink>
-  //   </nav>
+    
   );
 };
 
