@@ -22,19 +22,19 @@ body {
   margin-bottom: 5%;
 }
 
-.introduction {
+/* .introduction {
   color: orange;
   margin-top: 2%;
   margin-left: 2%;
   text-align: center;
-}
+} */
 
-.campus-image {
+/* .campus-image {
   width: 100%; 
   height: auto;
   align-self: center;
   margin-top: 5%;
-}
+} */
 
 footer {
   position: fixed;
@@ -42,11 +42,11 @@ footer {
   color: #ffffff
 }
 
-.brief {
+/* .brief {
   color: #000080;
   font-size: large;
   margin-top: 2%;
   margin-left: 2%;
   text-align: center;
-}
+} */
 

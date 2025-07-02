@@ -1,25 +1,19 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./AppStyles.css";
-import NavBar from "./components/NavBar";
-import { BrowserRouter as Router, Routes } from "react-router";
-import Footer from "./components/footer";
+import { BrowserRouter , Router, Routes, Route } from "react-router-dom";
 //import SearchCampus from "./components/SearchCampus";
 //import SearchStudents from "./components/SearhStudents";
 import HomePage from "./components/HomePage";
 
 const App = () => {
   return (
-    <div className="total">
-
-      <NavBar />
-      <HomePage />
-
-      
-
-      <Footer/>
-
-    </div>
+     <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<div className="all"> <HomePage/> </div>}> 
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
@@ -29,7 +23,5 @@ const App = () => {
 // declare Routes, Links, and use useful hooks like useNavigate.
 const root = createRoot(document.getElementById("root"));
 root.render(
-  <Router>
     <App />
-  </Router>
 );
