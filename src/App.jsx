@@ -17,7 +17,7 @@ const App = () => {
 
         <p className="brief">
           This project was created through the collaboration of Bilal Burton, Jeramy Leon, and Webbney Vallon.<br></br>
-          The app was designed to help you find and register for NYC college campuses. We hope you enjoyed our homepage.<br></br>
+          The app was designed to help you find and add colleges and students. We hope you enjoyed our homepage.<br></br>
           Whenever you're ready, please click any of the 'Search' buttons located at the top of the page, which will direct you to our search pages.<br></br>
           Thank you for visiting!
         </p>
