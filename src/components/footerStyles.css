@@ -1,0 +1,10 @@
+.footerElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerText {
+    color: black;
+    background-color: white;
+}

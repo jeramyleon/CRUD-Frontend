@@ -3,24 +3,35 @@ import { createRoot } from "react-dom/client";
 import "./AppStyles.css";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes } from "react-router";
+import Footer from "./components/footer";
 
 const App = () => {
   return (
-    <div>
+    <div className="total">
+
       <NavBar />
+
       <div className="app">
-        <h1 class="TTP">TTP</h1>
-        <img className="react-logo" src="/react-logo.svg" alt="React Logo" />
-        <p className="header">Welcome to our CRUD App!</p>
-        <p className="brief">This project was created through the collaboration of Bilal Burton, Jeramy Leon, and Webbney Vallon.<br></br>
+
+        <h1 className="introduction">Welcome to our CRUD App!</h1>
+
+        <p className="brief">
+          This project was created through the collaboration of Bilal Burton, Jeramy Leon, and Webbney Vallon.<br></br>
           The app was designed to help you find and register for NYC college campuses. We hope you enjoyed our homepage.<br></br>
-          When you're ready, please click the 'Search' button located at the top right of the screen, which will direct you to our search page.<br></br>
-          Thank you for visiting!</p>
-        <footer>All Rights Reserved. ©2025</footer>
+          Whenever you're ready, please click any of the 'Search' buttons located at the top of the page, which will direct you to our search pages.<br></br>
+          Thank you for visiting!
+        </p>
+
         <img class="campus-image" src="/campus.jpg"></img>
-        <button className="searchButton">Search</button>
+
+        
+
         <Routes>{/* Currently, we don't have any routes defined */}</Routes>
+      
       </div>
+
+      <Footer/>
+
     </div>
   );
 };
