@@ -10,6 +10,10 @@ const NavBar = () => {
         <li><a href="">Search Students</a></li>
       </ul>
     </div>
+
+  //   <nav className="navbar"> 
+  //     <NavLink to="/Home">Home </NavLink>
+  //   </nav>
   );
 };
 
