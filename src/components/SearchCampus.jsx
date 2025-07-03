@@ -2,26 +2,24 @@ import React from "react";
 import NavBar from "./NavBar";
 import Footer from "./footer"; 
 import "./HomePageStyles.css"
-
+import "./SearchCampusStyles.css"
 const SearchCampus = () => {
     return (
     <div>
       <NavBar />
-      <div className="Home">
-        <h1 className="introduction">Welcome </h1>
+        <h1 className="introduction">Welcome to the Campus Compendium</h1>
+      <div className="Home2">
 
         <p className="brief">
-          This project was created through the collaboration of Bilal Burton,
-          Jeramy Leon, and Webbney Vallon.<br></br>
-          The app was designed to help you find and add colleges and students.
-          We hope you enjoyed our homepage.<br></br>
-          Whenever you're ready, please click any of the 'Search' buttons
-          located at the top of the page, which will direct you to our search
-          pages.<br></br>
-          Thank you for visiting!
+        Feel free to look through our cataloge of campuses.
+         <br></br>
+        If you see one you like click on it, for more info.
+         <br></br>
+        However if the campus you're looking for is missing.
+        <br></br>
+        use the "Register Campus" button to add it.
         </p>
-
-        <img className="campus-image" src="/campus.jpg"></img>
+         <button id = "add-campus">Register Campus</button>
       </div>
 
       <Footer/>

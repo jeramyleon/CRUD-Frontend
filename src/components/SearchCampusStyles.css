@@ -1,0 +1,22 @@
+#add-campus {
+margin-top: 5%; /* creates space with any element above it, if nothing above moves down */
+background-color: orange;
+border: none; /* allows you remix the border */
+color: white; /* change the text color */
+padding: 15px 32px; /* creates more open space for style */
+text-align: center; /* config the text in the button */
+text-decoration: none;
+font-size: 16px;
+margin-right: 2%;
+border-radius: 8px;
+}
+
+#add-campus:hover {
+background-color: navy;
+}
+
+.Home2 { 
+    display: flex;  /* with the Flex option we can alter all the elements contained in that div */
+    flex-direction: row;
+    justify-content: space-between;
+}
