@@ -133,14 +133,15 @@ const CampusForm = () => {
               <p className="error-message">{errors.imageUrl}</p>
             )}
           </div>
-
-          <button
-            type="submit"
-            id="addCampusToDatabase"
-            className="submit-button"
-          >
-            Register Campus
-          </button>
+          <Link to="/CampusForm/SingleCampusView">
+            <button
+              type="submit"
+              id="addCampusToDatabase"
+              className="submit-button"
+            >
+              Register Campus
+            </button>
+          </Link>
         </form>
       </div>
       <Footer />

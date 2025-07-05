@@ -1,68 +1,62 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import NavBar from "./NavBar";
 import Footer from "./footer";
 import { Link } from "react-router";
 
-
- const CampusEditPage = () => {
+const CampusEditPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    address: '',
-    description: '',
-    imageUrl: ''
+    name: "",
+    address: "",
+    description: "",
+    imageUrl: "",
   });
-  
+
   const [errors, setErrors] = useState({
-    name: '',
-    address: '',
-    description: '',
-    imageUrl: ''
+    name: "",
+    address: "",
+    description: "",
+    imageUrl: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-    
-    
+
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ''
+        [name]: "",
       }));
     }
   };
 
   const validateForm = () => {
     let valid = true;
-    const newErrors = {...errors};
+    const newErrors = { ...errors };
 
-    
     if (!formData.name.trim()) {
-      newErrors.name = 'Campus name is required';
+      newErrors.name = "Campus name is required";
       valid = false;
     }
 
-    
     if (!formData.address.trim()) {
-      newErrors.address = 'Address is required';
+      newErrors.address = "Address is required";
       valid = false;
     }
 
-    
     if (!formData.description.trim()) {
-      newErrors.description = 'Description is required';
+      newErrors.description = "Description is required";
       valid = false;
     } else if (formData.description.length < 20) {
-      newErrors.description = 'Description should be at least 20 characters';
+      newErrors.description = "Description should be at least 20 characters";
       valid = false;
     }
 
-    
     if (formData.imageUrl && !/^https?:\/\/.+\..+/.test(formData.imageUrl)) {
-      newErrors.imageUrl = 'Please enter a valid URL';
+      newErrors.imageUrl = "Please enter a valid URL";
       valid = false;
     }
 
@@ -72,9 +66,9 @@ import { Link } from "react-router";
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
-      console.log('Form submitted:', formData);
+      console.log("Form submitted:", formData);
     }
   };
 
@@ -82,7 +76,7 @@ import { Link } from "react-router";
     <div className="campus-form-page">
       <NavBar />
       <div className="CampusBody">
-        <h1 className="headerForm">New Campus Form</h1>
+        <h1 className="headerForm">Edit Campus Form</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Campus Name:</label>
@@ -105,7 +99,9 @@ import { Link } from "react-router";
               value={formData.address}
               onChange={handleChange}
             />
-            {errors.address && <p className="error-message">{errors.address}</p>}
+            {errors.address && (
+              <p className="error-message">{errors.address}</p>
+            )}
           </div>
 
           <div className="form-group">
@@ -117,7 +113,9 @@ import { Link } from "react-router";
               onChange={handleChange}
               rows="4"
             />
-            {errors.description && <p className="error-message">{errors.description}</p>}
+            {errors.description && (
+              <p className="error-message">{errors.description}</p>
+            )}
           </div>
 
           <div className="form-group">
@@ -130,12 +128,19 @@ import { Link } from "react-router";
               onChange={handleChange}
               placeholder="https://example.com/image.jpg"
             />
-            {errors.imageUrl && <p className="error-message">{errors.imageUrl}</p>}
+            {errors.imageUrl && (
+              <p className="error-message">{errors.imageUrl}</p>
+            )}
           </div>
-
-          <button type="submit" id="addCampusToDatabase" className="submit-button">
-            Add Campus
-          </button>
+          <Link to="/CampusEdit/SingleCampusView">
+            <button
+              type="submit"
+              id="addCampusToDatabase"
+              className="submit-button"
+            >
+              Add Campus
+            </button>
+          </Link>
         </form>
       </div>
       <Footer />

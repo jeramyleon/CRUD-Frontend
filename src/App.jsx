@@ -7,6 +7,7 @@ import SearchCampus from "./components/SearchCampus";
 import HomePage from "./components/HomePage";
 import CampusForm from "./components/CampusForm";
 import CampusView from "./components/SingleCampusView";
+import CampusEditPage from "./components/CampusEdit";
 
 
 const App = () => {
@@ -21,6 +22,8 @@ const App = () => {
         </Route> */}
         <Route path="/CampusSearch/CampusForm" element={<CampusForm/> }/> 
         <Route path="/CampusForm/SingleCampusView" element={<CampusView/> }/> 
+        <Route path="/CampusEdit/SingleCampusView" element={<CampusView/> }/> 
+        <Route path="/SingleCampusView/CampusEdit" element={<CampusEditPage/> }/> 
       </Routes>
     </BrowserRouter>
   );
