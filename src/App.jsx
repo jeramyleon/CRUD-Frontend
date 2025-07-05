@@ -6,6 +6,7 @@ import SearchCampus from "./components/SearchCampus";
 //import SearchStudents from "./components/SearchStudents";
 import HomePage from "./components/HomePage";
 import CampusForm from "./components/CampusForm";
+import CampusView from "./components/SingleCampusView";
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
          {/* <Route path="/" element={<div className="all"> <SearchStudents/> </div>}> 
         </Route> */}
         <Route path="/CampusSearch/CampusForm" element={<CampusForm/> }/> 
+        <Route path="/CampusForm/SingleCampusView" element={<CampusView/> }/> 
       </Routes>
     </BrowserRouter>
   );
