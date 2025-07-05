@@ -1,0 +1,91 @@
+.singleHeader {
+    margin-top: 2%;
+    color: orange;
+    margin-bottom: 3%;
+}
+
+#student-image {
+    margin-top: 0%;
+    width: 50%;
+    height: auto;
+    border-radius: 0%;
+}
+
+.student-all-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;   
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#student-name {
+    color: navy;
+}
+
+#student-gpa {
+    color: orange;
+}
+
+#edit-button {
+    margin-top: 5%;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#delete-button {
+    margin-top: 5%;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.edit-delete-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#edit-button:hover {
+    background-color: navy;
+}
+
+#delete-button:hover {
+    background-color: navy;
+}
+
+.campus-registry {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#add-to-campus-button {
+    margin-top: 5%;
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#add-to-campus-button:hover {
+    background-color: navy;
+}
+
+

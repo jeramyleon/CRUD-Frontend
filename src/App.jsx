@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from "./components/HomePage";
 import StudentPage from "./components/StudentPage";
 import StudentFormPage from "./components/newStudentFormPage";
+import EditFormPage from "./components/editPage";
+import SingleStudentView from "./components/singleViewStudent";
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
         <Route path="/" element={<div className="all"> <HomePage/> </div>}/>
         <Route path="/students" element={<StudentPage/>}/>
         <Route path="/students/NewStudentForm" element={<StudentFormPage/>}/>
+        <Route path="/editStudent" element={<EditFormPage/>}/>
+        <Route path="/singleStudent" element={<SingleStudentView/>}/>
       </Routes>
 
     </BrowserRouter>

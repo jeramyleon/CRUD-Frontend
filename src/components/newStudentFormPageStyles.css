@@ -1,5 +1,5 @@
 #addStudentToDatabase {
-    margin-top: 5%;
+    margin-top: 10%;
     background-color: orange;
     border: none;
     color: white;
@@ -7,8 +7,16 @@
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 5px #9c9b9b);
 }
 
 #addStudentToDatabase:hover {
     background-color: navy;
+}
+
+.headerForm {
+    color: orange;
+    margin-top: 5%;
+    margin-bottom: 3%;
 }

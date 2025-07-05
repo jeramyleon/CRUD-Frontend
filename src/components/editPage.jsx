@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import "./newStudentFormPageStyles.css";
+import "./editPageStyles.css";
 import NavBar from "./NavBar";
 import Footer from "./footer";
 
-const StudentFormPage = () => {
+const EditFormPage = () => {
     const [inputValue, setInputValue] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -25,8 +25,8 @@ const StudentFormPage = () => {
 
             <div className="StudentBody">
 
-                <h1 className="headerForm">New Student</h1>
-        
+                <h1 className="editHeader">Edit Student</h1>
+
                 <form onSubmit={handleSubmit}>
                     <label>First name:</label><br></br>
                     <input type="text" id="firstname" name="firstname" value={inputValue} onChange={(e) => setInputValue(e.target.value)}></input><br></br>
@@ -35,13 +35,13 @@ const StudentFormPage = () => {
                     <label>Last name:</label><br></br>
                     <input type="text" id="lastname" name="lastname" value={inputValue}></input><br></br>
 
-                    <label>GPA:</label><br></br>
-                    <input type="text" id="gpa" name="gpa"></input><br></br>
-
                     <label>Image url:</label><br></br>
                     <input type="text" id="image" name="image"></input><br></br>
 
-                    <button id="addStudentToDatabase">Submit</button>                
+                    <label>GPA:</label><br></br>
+                    <input type="text" id="gpa" name="gpa"></input><br></br>
+
+                    <button id="addStudentToDatabase">Save Changes</button>                
                 </form>
             </div>
 
@@ -50,4 +50,4 @@ const StudentFormPage = () => {
   );
 };
 
-export default StudentFormPage;
+export default EditFormPage;
