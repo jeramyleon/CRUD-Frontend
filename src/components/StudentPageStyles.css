@@ -1,0 +1,27 @@
+p {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: #000080;
+}
+
+#addStudentButton {
+    margin-top: 5%;
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.StudentBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addStudentButton:hover {
+  background-color: navy;
+}

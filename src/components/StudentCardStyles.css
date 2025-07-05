@@ -1,0 +1,22 @@
+.Box {
+    height: 250px;
+    width: 250px;
+    padding: 10px;
+    border: 5px solid orange;
+    margin: 0;
+    text-align: left;
+}
+
+.InternalBox {
+    display: flex;
+    flex-direction: column; 
+}
+
+#studentName {
+    margin-top: 60%;
+}
+
+#campusName {
+    margin-top: 10%;
+    text-align: left;
+}

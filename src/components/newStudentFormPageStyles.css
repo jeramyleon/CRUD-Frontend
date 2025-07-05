@@ -1,0 +1,14 @@
+#addStudentToDatabase {
+    margin-top: 5%;
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#addStudentToDatabase:hover {
+    background-color: navy;
+}

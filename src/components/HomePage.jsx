@@ -1,9 +1,14 @@
 import React from "react";
-// import "./HomePageStyles.css";
+import "./HomePageStyles.css";
+import NavBar from "./NavBar";
+import Footer from "./footer";
 
 const HomePage = () => {
   return (
-    <div className="Home">
+    <div>
+      <NavBar/>
+
+      <div className="Home">
 
         <h1 className="introduction">Welcome to our CRUD App!</h1>
 
@@ -15,8 +20,13 @@ const HomePage = () => {
         </p>
 
         <img class="campus-image" src="/campus.jpg"></img>
+  
     </div>
+    
+    <Footer/>
+    </div>    
   );
 };
 
 export default HomePage;
+

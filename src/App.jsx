@@ -1,20 +1,21 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./AppStyles.css";
-import NavBar from "./components/NavBar";
-import { BrowserRouter, BrowserRouter as Router, Routes } from "react-router";
-import Footer from "./components/footer";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from "./components/HomePage";
+import StudentPage from "./components/StudentPage";
+import StudentFormPage from "./components/newStudentFormPage";
 
 const App = () => {
   return (
-    <div className="total">
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<div className="all"> <HomePage/> </div>}/>
+        <Route path="/students" element={<StudentPage/>}/>
+        <Route path="/students/NewStudentForm" element={<StudentFormPage/>}/>
+      </Routes>
 
-      <NavBar/>
-      <HomePage/>
-      <Footer/>
-
-    </div>
+    </BrowserRouter>
   );
 };
 
@@ -24,7 +25,6 @@ const App = () => {
 // declare Routes, Links, and use useful hooks like useNavigate.
 const root = createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
     <App />
-  </BrowserRouter>
+
 );
