@@ -9,7 +9,7 @@ const SearchCampus = () => {
   return (
     <div>
       <NavBar />
-      <h1 className="introduction">Welcome to the Campus Compendium</h1>
+      <h1 className="introduction">Welcome to the Campus Compendium!</h1>
       <div className="Home2">
         <p className="brief">
           Feel free to look through our cataloge of campuses.
@@ -20,17 +20,13 @@ const SearchCampus = () => {
           <br></br>
           use the "Register Campus" button to add it.
         </p>
-        
+
         <Link to="/CampusSearch/CampusForm">
           <button id="add-campus">Register Campus</button>
         </Link>
-      
       </div>
       <Footer />
     </div>
-
-   
-
   );
 };
 

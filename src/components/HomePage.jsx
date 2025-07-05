@@ -13,10 +13,10 @@ const HomePage = () => {
         <p className="brief">
           This project was created through the collaboration of Bilal Burton,
           Jeramy Leon, and Webbney Vallon.<br></br>
-          The app was designed to help you find and add colleges and students.
+          This app was designed to view and log colleges and students.
           We hope you enjoyed our homepage.<br></br>
-          Whenever you're ready, please click any of the 'Search' buttons
-          located at the top of the page, which will direct you to our search
+          Whenever you're ready, please use the 'Compendium' tabs
+          located at the top of the page, which will direct you to our Compendium
           pages.<br></br>
           Thank you for visiting!
         </p>
