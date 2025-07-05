@@ -8,7 +8,8 @@ text-align: center; /* config the text in the button */
 text-decoration: none;
 font-size: 16px;
 margin-right: 2%;
-border-radius: 8px;
+border-radius: 10px;
+ filter: drop-shadow(0 0 5px #9c9b9b);
 }
 
 #add-campus:hover {
