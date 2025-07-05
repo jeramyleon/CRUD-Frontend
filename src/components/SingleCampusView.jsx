@@ -7,7 +7,8 @@ const CampusView = () => {
         <div>
             <NavBar />
             <p>
-                this is the info.
+               This page is for the Single campus view.
+
             </p>
             <Footer />
         </div>
@@ -16,3 +17,6 @@ const CampusView = () => {
 };
 
 export default CampusView;
+
+
+
