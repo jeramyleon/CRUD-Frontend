@@ -5,6 +5,8 @@ import { BrowserRouter , Router, Routes, Route } from "react-router-dom";
 import SearchCampus from "./components/SearchCampus";
 //import SearchStudents from "./components/SearchStudents";
 import HomePage from "./components/HomePage";
+import CampusForm from "./components/CampusForm";
+
 
 const App = () => {
   return (
@@ -16,6 +18,7 @@ const App = () => {
         </Route>
          {/* <Route path="/" element={<div className="all"> <SearchStudents/> </div>}> 
         </Route> */}
+        <Route path="/CampusSearch/CampusForm" element={<CampusForm/> }/> 
       </Routes>
     </BrowserRouter>
   );
