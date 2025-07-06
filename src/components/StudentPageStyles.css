@@ -6,7 +6,7 @@ p {
 }
 
 #addStudentButton {
-    margin-top: 5%;
+    margin-top: 10%;
     background-color: orange;
     border: none;
     color: white;
@@ -24,4 +24,15 @@ p {
 
 #addStudentButton:hover {
   background-color: navy;
+}
+
+.studentGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.introduction {
+    margin-bottom: 20px;
 }

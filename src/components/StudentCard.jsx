@@ -1,14 +1,13 @@
 import React from "react";
 import "./StudentCardStyles.css";
 
-const StudentCard = () => {
+const StudentCard = ({ name, campus, picture}) => {
   return (
     <div className="Box">
         <div className="InternalBox">
-            <img id="studentPicture"alt="picture"></img>
-            <h2 id="studentName">Student Name</h2>
-            <p id="campusName">campus name</p>
-
+            <img id="studentPicture" src={picture} alt={`${name}'s picture`}/>
+            <h2 id="studentName">{name}</h2>
+            <p id="campusName">{campus}</p>
         </div>
     </div>
   );

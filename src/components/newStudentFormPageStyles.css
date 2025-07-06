@@ -20,3 +20,16 @@
     margin-top: 5%;
     margin-bottom: 3%;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-top: -5%;
+}
+
+name {
+    margin-top: 0%;
+}

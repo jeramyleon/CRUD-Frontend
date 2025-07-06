@@ -11,14 +11,15 @@ import SingleStudentView from "./components/singleViewStudent";
 const App = () => {
   return (
     <BrowserRouter>
+
       <Routes>
+
         <Route path="/" element={<div className="all"> <HomePage/> </div>}/>
         <Route path="/students" element={<StudentPage/>}/>
         <Route path="/students/NewStudentForm" element={<StudentFormPage/>}/>
         <Route path="/editStudent" element={<EditFormPage/>}/>
         <Route path="/singleStudent" element={<SingleStudentView/>}/>
       </Routes>
-
     </BrowserRouter>
   );
 };

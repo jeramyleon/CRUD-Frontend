@@ -13,10 +13,17 @@
 }
 
 #studentName {
-    margin-top: 60%;
+    margin-top: 5%;
 }
 
 #campusName {
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: left;
+}
+
+#studentPicture {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
 }

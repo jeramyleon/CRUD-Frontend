@@ -1,21 +1,52 @@
 import React, {useState} from "react";
 import "./newStudentFormPageStyles.css";
+import StudentPage from "./StudentPage";
 import NavBar from "./NavBar";
 import Footer from "./footer";
+import { useNavigate } from "react-router-dom";
 
 const StudentFormPage = () => {
-    const [inputValue, setInputValue] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+    const [formData, setFormData] = useState({
+        name: '',
+        gpa: 0, 
+        image: ''
+    });
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const navigate = useNavigate();
+    const [errors, setErrors] = useState({});
 
-        if (inputValue.trim() === '') {
-            setErrorMessage('First name cannot be empty.')
-            console.log(errorMessage);
-        } else {
-            setErrorMessage('');
-            console.log('First name accepted.');
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+
+        setFormData({
+            ...formData,
+            [name]: value,
+        });  
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const newErrors = {};
+
+        if (!formData.name.trim()) {
+            newErrors.name = 'Username is required.';
+        }
+
+        const gpaValue = parseFloat(formData.gpa);
+        if (isNaN(gpaValue) || gpaValue < 0 || gpaValue > 4) {
+            newErrors.gpa = 'Number must be between 0 and 4.';
+        }
+
+        if (!formData.image) {
+            formData.image = '/campus.jpg';
+        }
+
+        setErrors(newErrors);
+
+        if (Object.keys(newErrors).length === 0) {
+            console.log('Form submitted');
+            navigate("/singleStudent");
         }
     };
 
@@ -27,19 +58,18 @@ const StudentFormPage = () => {
 
                 <h1 className="headerForm">New Student</h1>
         
-                <form onSubmit={handleSubmit}>
-                    <label>First name:</label><br></br>
-                    <input type="text" id="firstname" name="firstname" value={inputValue} onChange={(e) => setInputValue(e.target.value)}></input><br></br>
-                    {errorMessage && <p style={{color:'red'}}>{errorMessage}</p>}
-
-                    <label>Last name:</label><br></br>
-                    <input type="text" id="lastname" name="lastname" value={inputValue}></input><br></br>
+                <form className="form" onSubmit={handleSubmit}>
+                    <label>Name:</label><br></br>
+                    <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange}></input><br></br>
+                    {errors.name && <p style={{color:'red'}}>{errors.name}</p>}
 
                     <label>GPA:</label><br></br>
-                    <input type="text" id="gpa" name="gpa"></input><br></br>
+                    <input type="text" id="gpa" name="gpa" value={formData.gpa} onChange={handleInputChange}></input><br></br>
+                    {errors.gpa && <p style={{color:'red'}}>{errors.gpa}</p>}
 
-                    <label>Image url:</label><br></br>
-                    <input type="text" id="image" name="image"></input><br></br>
+                    <label>Image URL:</label><br></br>
+                    <input type="text" id="image" name="image" value={formData.image} onChange={handleInputChange}></input><br></br>
+                    {errors.image && <p style={{color:'red'}}>{errors.image}</p>}
 
                     <button id="addStudentToDatabase">Submit</button>                
                 </form>

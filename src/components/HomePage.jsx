@@ -19,7 +19,7 @@ const HomePage = () => {
           Thank you for visiting!
         </p>
 
-        <img class="campus-image" src="/campus.jpg"></img>
+        <img id="campus-image" src="/campus.jpg"></img>
   
     </div>
     
