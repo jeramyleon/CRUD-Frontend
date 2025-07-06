@@ -19,6 +19,11 @@ const CampusCard = ({picture, name, address, discription}) => {
             <Link to="/CampusCard/CampusEdit">
           <button id="Edit1">Edit Campus</button>
             </Link>
+            
+            <Link to="/CampusCard/SingleCampusView">
+            <button id="View">View Campus</button>
+            </Link>
+         
           <button id="Delete2">Delete Campus</button>
           <button id="AS2">View Students</button>
         </div>

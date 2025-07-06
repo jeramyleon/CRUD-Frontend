@@ -25,6 +25,7 @@ const App = () => {
         <Route path="/CampusEdit/SingleCampusView" element={<CampusView/> }/> 
         <Route path="/SingleCampusView/CampusEdit" element={<CampusEditPage/> }/> 
         <Route path="/CampusCard/CampusEdit" element={<CampusEditPage/> }/> 
+        <Route path="/CampusCard/SingleCampusView" element={<CampusView/> }/>
       </Routes>
     </BrowserRouter>
   );
