@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
 import Footer from "./footer";
-import { Link } from "react-router";
 import "./CampusFormStyles.css";
+import { useNavigate } from "react-router-dom";
 
 const CampusForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     address: "",
@@ -70,6 +71,7 @@ const CampusForm = () => {
 
     if (validateForm()) {
       console.log("Form submitted:", formData);
+      navigate("/CampusForm/SingleCampusView");
     }
   };
 
@@ -77,7 +79,7 @@ const CampusForm = () => {
     <div className="campus-form-page">
       <NavBar />
       <div className="CampusBody">
-        <h1 className="headerForm">New Campus Form</h1>
+        <h1 className="headerForm">Register Campus Form</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Campus Name:</label>
@@ -133,15 +135,19 @@ const CampusForm = () => {
               <p className="error-message">{errors.imageUrl}</p>
             )}
           </div>
-          <Link to="/CampusForm/SingleCampusView">
-            <button
-              type="submit"
-              id="addCampusToDatabase"
-              className="submit-button"
-            >
-              Register Campus
-            </button>
-          </Link>
+          <button
+            type="submit"
+            id="addCampusToDatabase"
+            className="submit-button"
+            disabled={
+              !formData.name ||
+              !formData.address ||
+              !formData.description ||
+              Object.values(errors).some((error) => error)
+            }
+          >
+            Register Campus
+          </button>
         </form>
       </div>
       <Footer />

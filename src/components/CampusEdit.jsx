@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import Footer from "./footer";
 import { Link } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const CampusEditPage = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     address: "",
@@ -69,6 +71,7 @@ const CampusEditPage = () => {
 
     if (validateForm()) {
       console.log("Form submitted:", formData);
+      navigate("/CampusForm/SingleCampusView");
     }
   };
 
@@ -132,15 +135,19 @@ const CampusEditPage = () => {
               <p className="error-message">{errors.imageUrl}</p>
             )}
           </div>
-          <Link to="/CampusEdit/SingleCampusView">
-            <button
-              type="submit"
-              id="addCampusToDatabase"
-              className="submit-button"
-            >
-              Add Campus
-            </button>
-          </Link>
+          <button
+            type="submit"
+            id="addCampusToDatabase"
+            className="submit-button"
+            disabled={
+              !formData.name ||
+              !formData.address ||
+              !formData.description ||
+              Object.values(errors).some((error) => error)
+            }
+          >
+            Register Campus
+          </button>
         </form>
       </div>
       <Footer />
