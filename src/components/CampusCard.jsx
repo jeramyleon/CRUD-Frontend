@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import Footer from "./footer";
 import "./CampusCardStyles.css"
+import { Link } from "react-router";
 
 const CampusCard = ({picture, name, address, discription}) => {
     return (
@@ -15,7 +16,9 @@ const CampusCard = ({picture, name, address, discription}) => {
           </div>
         </div>
         <div className="campus-buttons">
+            <Link to="/CampusCard/CampusEdit">
           <button id="Edit1">Edit Campus</button>
+            </Link>
           <button id="Delete2">Delete Campus</button>
           <button id="AS2">View Students</button>
         </div>
