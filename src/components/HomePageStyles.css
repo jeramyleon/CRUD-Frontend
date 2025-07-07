@@ -1,11 +1,11 @@
 .introduction {
-    color: orange;
+  color: orange;
   margin-top: 2%;
   margin-left: 2%;
   text-align: center;
 }
 
-.campus-image {
+#campus-image {
   width: 100%; 
   height: auto;
   align-self: center;
@@ -18,4 +18,5 @@
   margin-top: 2%;
   margin-left: 2%;
   text-align: center;
+
 }

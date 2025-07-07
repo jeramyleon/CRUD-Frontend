@@ -9,7 +9,7 @@ body {
   background-color: white;
 }
 
-.total {
+.all {
   display: flex;
   flex-direction: column;
 }

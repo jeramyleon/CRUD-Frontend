@@ -8,16 +8,20 @@ import HomePage from "./components/HomePage";
 import CampusForm from "./components/CampusForm";
 import CampusView from "./components/SingleCampusView";
 import CampusEditPage from "./components/CampusEdit";
+import StudentPage from "./components/StudentPage";
+import StudentFormPage from "./components/newStudentFormPage";
+import EditFormPage from "./components/editPage";
+import SingleStudentView from "./components/singleViewStudent";
 
 
 const App = () => {
   return (
-     <BrowserRouter>
+    <BrowserRouter>
+
       <Routes>
-        <Route path="/" element={<div className="all"> <HomePage/> </div>}> 
-        </Route>
-        <Route path="/CampusSearch" element={<SearchCampus/> }> 
-        </Route>
+
+        <Route path="/" element={<div className="all"> <HomePage/> </div>}></Route>
+        <Route path="/CampusSearch" element={<SearchCampus/> }></Route>
          {/* <Route path="/" element={<div className="all"> <SearchStudents/> </div>}> 
         </Route> */}
         <Route path="/CampusSearch/CampusForm" element={<CampusForm/> }/> 
@@ -26,8 +30,14 @@ const App = () => {
         <Route path="/SingleCampusView/CampusEdit" element={<CampusEditPage/> }/> 
         <Route path="/CampusCard/CampusEdit" element={<CampusEditPage/> }/> 
         <Route path="/CampusCard/SingleCampusView" element={<CampusView/> }/>
+        <Route path="/students" element={<StudentPage/>}/>
+        <Route path="/students/NewStudentForm" element={<StudentFormPage/>}/>
+        <Route path="/editStudent" element={<EditFormPage/>}/>
+        <Route path="/singleStudent" element={<SingleStudentView/>}/>
       </Routes>
     </BrowserRouter>
+
+
   );
 };
 
@@ -35,7 +45,9 @@ const App = () => {
 // It's important that the Router is at the top level of our app,
 // and that we wrap our entire app in it. With this in place, we can
 // declare Routes, Links, and use useful hooks like useNavigate.
+
 const root = createRoot(document.getElementById("root"));
 root.render(
     <App />
+
 );
