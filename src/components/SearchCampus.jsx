@@ -6,24 +6,25 @@ import "./SearchCampusStyles.css";
 import "./SingleCampusView.css";
 import CampusCard from "./CampusCard";
 import { Link } from "react-router";
+import { campuses } from "./campusMockData";
 
 const SearchCampus = () => {
-  const [Campus, setCampus] = useState([]);
+  // const [Campus, setCampus] = useState([]);
 
-  useEffect(() => {
-    const mockData = [
-      {
-        id: 1,
-        name: "Xavier's school for Gifted youngsters",
-        address: "Earth-616, NY, North Salem",
-        picture: "/campus.jpg",
-        discription:
-          "The Xavier's School for Gifted Youngsters is a special institute founded and led by Professor Charles Xavier to train young mutants in controlling their powers and help foster a friendly human-mutant relationship.",
-      },
-    ];
+  // useEffect(() => {
+  //   const mockData = [
+  //     {
+  //       id: 1,
+  //       name: "Xavier's school for Gifted youngsters",
+  //       address: "Earth-616, NY, North Salem",
+  //       picture: "/campus.jpg",
+  //       discription:
+  //         "The Xavier's School for Gifted Youngsters is a special institute founded and led by Professor Charles Xavier to train young mutants in controlling their powers and help foster a friendly human-mutant relationship.",
+  //     },
+  //   ];
 
-    setCampus(mockData);
-  }, []);
+  //   setCampus(mockData);
+  // }, []);
 
   return (
     <div>
@@ -45,13 +46,13 @@ const SearchCampus = () => {
         </Link>
       </div>
       <div>
-        {Campus.map((Campus) => (
+        {campuses.map((campus) => (
           <CampusCard
-            key={Campus.id}
-            name={Campus.name}
-            address={Campus.address}
-            picture={Campus.picture}
-            discription={Campus.discription}
+            key={campus.id}
+            name={campus.name}
+            address={campus.address}
+            picture={campus.picture}
+            discription={campus.discription}
           />
         ))}
       </div>

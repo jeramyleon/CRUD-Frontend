@@ -4,46 +4,47 @@ import NavBar from "./NavBar";
 import Footer from "./footer";
 import StudentCard from "./StudentCard";
 import { Link } from "react-router-dom";
+import { students } from "./studentMockData";
 
 const StudentPage = () => {
-  const [students, setStudents] = useState([]);
+  // const [students, setStudents] = useState([]);
 
-  useEffect(() => {
-    const mockData = [
-      {
-        id: 1,
-        name: "Jeramy Leon",
-        campus: "BMCC",
-        picture: "/campus.jpg"
-      },
-      {
-        id: 2, 
-        name: "Lebron James",
-        campus: "St Vincent St Mary",
-        picture: "/campus.jpg"
-      },
-      {
-        id: 3,
-        name: "Michael Jordan",
-        campus: "North Carolina",
-        picture: "/campus.jpg"
-      },
-      {
-        id: 4,
-        name: "Kobe Bryant",
-        campus: "Kobe academy",
-        picture: "/campus.jpg"
-      },
-      {
-        id: 5,
-        name: "Stephen Curry",
-        campus: "Davidson",
-        picture: "/campus.jpg"
-      }
-  ];
+  // useEffect(() => {
+  //   const mockData = [
+  //     {
+  //       id: 1,
+  //       name: "Jeramy Leon",
+  //       campus: "BMCC",
+  //       picture: "/campus.jpg"
+  //     },
+  //     {
+  //       id: 2, 
+  //       name: "Lebron James",
+  //       campus: "St Vincent St Mary",
+  //       picture: "/campus.jpg"
+  //     },
+  //     {
+  //       id: 3,
+  //       name: "Michael Jordan",
+  //       campus: "North Carolina",
+  //       picture: "/campus.jpg"
+  //     },
+  //     {
+  //       id: 4,
+  //       name: "Kobe Bryant",
+  //       campus: "Kobe academy",
+  //       picture: "/campus.jpg"
+  //     },
+  //     {
+  //       id: 5,
+  //       name: "Stephen Curry",
+  //       campus: "Davidson",
+  //       picture: "/campus.jpg"
+  //     }
+  // ];
 
-    setStudents(mockData);
-  }, []);
+  //   setStudents(mockData);
+  // }, []);
   return (
     <div>
         <NavBar/>
