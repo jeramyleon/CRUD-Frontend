@@ -2,9 +2,12 @@ import React, {useState} from "react";
 import "./singleViewStudentStyles.css";
 import NavBar from "./NavBar";
 import Footer from "./footer";
-import { Link } from "react-router";
+import { BrowserRouter, Link, useParams } from "react-router";
+import { students } from "./studentMockData";
 
-const SingleStudentView = () => {
+const SingleStudentView = ({}) => {
+    const { id } = useParams();
+
     return (
         <div>
             <NavBar/>
@@ -17,9 +20,9 @@ const SingleStudentView = () => {
                     <img id="student-image" src="/campus.jpg"></img>
 
                     <div class="student-info">
-                        <h2 id="student-name">student.name</h2>
+                        <h2 id="student-name">{students[id].name}</h2>
 
-                        <h3 id="student-gpa">GPA: 3.4</h3>
+                        <h3 id="student-gpa">GPA: {students[id].gpa}</h3>
 
                         <div className="edit-delete-buttons">
                             <button id="edit-button">edit</button>

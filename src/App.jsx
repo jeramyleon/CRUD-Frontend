@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./AppStyles.css";
-import { BrowserRouter , Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter , Router, Routes, Route, Link } from "react-router-dom";
 import SearchCampus from "./components/SearchCampus";
 //import SearchStudents from "./components/SearchStudents";
 import HomePage from "./components/HomePage";
@@ -12,7 +12,8 @@ import StudentPage from "./components/StudentPage";
 import StudentFormPage from "./components/newStudentFormPage";
 import EditFormPage from "./components/editPage";
 import SingleStudentView from "./components/singleViewStudent";
-
+import { students } from "./components/studentMockData";
+import { campuses } from "./components/campusMockData";
 
 const App = () => {
   return (
@@ -22,8 +23,6 @@ const App = () => {
 
         <Route path="/" element={<div className="all"> <HomePage/> </div>}></Route>
         <Route path="/CampusSearch" element={<SearchCampus/> }></Route>
-         {/* <Route path="/" element={<div className="all"> <SearchStudents/> </div>}> 
-        </Route> */}
         <Route path="/CampusSearch/CampusForm" element={<CampusForm/> }/> 
         <Route path="/CampusForm/SingleCampusView" element={<CampusView/> }/> 
         <Route path="/CampusEdit/SingleCampusView" element={<CampusView/> }/> 
@@ -33,11 +32,11 @@ const App = () => {
         <Route path="/students" element={<StudentPage/>}/>
         <Route path="/students/NewStudentForm" element={<StudentFormPage/>}/>
         <Route path="/editStudent" element={<EditFormPage/>}/>
-        <Route path="/singleStudent" element={<SingleStudentView/>}/>
+        <Route path="/singleStudent/:id" element={<SingleStudentView/>}/>
+
+
       </Routes>
     </BrowserRouter>
-
-
   );
 };
 
