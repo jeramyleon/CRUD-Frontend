@@ -20,6 +20,13 @@ const SearchCampus = () => {
         discription:
           "The Xavier's School for Gifted Youngsters is a special institute founded and led by Professor Charles Xavier to train young mutants in controlling their powers and help foster a friendly human-mutant relationship.",
       },
+      {
+        id: 2,
+        name: "School",
+        address: "Renma avenue",
+        picture: "/campus.jpg",
+        discription: "Description",
+      }
     ];
 
     setCampus(mockData);
@@ -45,13 +52,13 @@ const SearchCampus = () => {
         </Link>
       </div>
       <div>
-        {Campus.map((Campus) => (
+        {Campus.map((c) => (
           <CampusCard
-            key={Campus.id}
-            name={Campus.name}
-            address={Campus.address}
-            picture={Campus.picture}
-            discription={Campus.discription}
+            key={c.id}
+            name={c.name}
+            address={c.address}
+            picture={c.picture}
+            discription={c.discription}
           />
         ))}
       </div>
