@@ -54,7 +54,8 @@ const StudentFormPage = () => {
                     id: studentCount,
                     name: formData.name,
                     campus: 'none',
-                    picture: formData.image
+                    picture: formData.image,
+                    gpa: gpaValue
                 }
             );
 

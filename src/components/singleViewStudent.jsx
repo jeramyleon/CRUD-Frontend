@@ -17,7 +17,7 @@ const SingleStudentView = ({}) => {
                 <h1 className="singleHeader">Single Student View</h1>
 
                 <div class="student-all-elements">
-                    <img id="student-image" src={students[id - 1].url}></img>
+                    <img id="student-image" src={students[id - 1].picture}/>
 
                     <div class="student-info">
                         <h2 id="student-name">{students[id - 1].name}</h2>
