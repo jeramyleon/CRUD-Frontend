@@ -22,7 +22,7 @@
 }
 
 #studentPicture {
-    width: auto;
+    width: 75%;
     height: auto;
     object-fit: cover;
     border-radius: 8px;

@@ -3,9 +3,12 @@ import "./newStudentFormPageStyles.css";
 import StudentPage from "./StudentPage";
 import NavBar from "./NavBar";
 import Footer from "./footer";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { students } from "./studentMockData";
 
 const StudentFormPage = () => {
+    let studentCount = students.length;
+
     const [formData, setFormData] = useState({
         name: '',
         gpa: 0, 
@@ -45,8 +48,17 @@ const StudentFormPage = () => {
         setErrors(newErrors);
 
         if (Object.keys(newErrors).length === 0) {
-            console.log('Form submitted');
-            navigate("/singleStudent");
+            studentCount++;
+            students.push(
+                {
+                    id: studentCount,
+                    name: formData.name,
+                    campus: 'none',
+                    picture: formData.image
+                }
+            );
+
+            navigate(`/singleStudent/${studentCount}`);
         }
     };
 

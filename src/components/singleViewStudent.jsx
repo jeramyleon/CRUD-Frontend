@@ -17,12 +17,12 @@ const SingleStudentView = ({}) => {
                 <h1 className="singleHeader">Single Student View</h1>
 
                 <div class="student-all-elements">
-                    <img id="student-image" src="/campus.jpg"></img>
+                    <img id="student-image" src={students[id - 1].url}></img>
 
                     <div class="student-info">
-                        <h2 id="student-name">{students[id].name}</h2>
+                        <h2 id="student-name">{students[id - 1].name}</h2>
 
-                        <h3 id="student-gpa">GPA: {students[id].gpa}</h3>
+                        <h3 id="student-gpa">GPA: {students[id - 1].gpa}</h3>
 
                         <div className="edit-delete-buttons">
                             <button id="edit-button">edit</button>
